@@ -4,7 +4,7 @@ LABEL maintainer="Edwin Guilbert"
 
 # ENV variables for Tomcat
 ENV TOMCAT_MAJOR 9
-ENV TOMCAT_VERSION 9.0.34
+ENV TOMCAT_VERSION 9.0.35
 ENV CATALINA_HOME /opt/tomcat
 ENV CATALINA_TMPDIR /tmp/tomcat
 ENV DEPLOYMENT_DIR $CATALINA_HOME/webapps
@@ -13,7 +13,8 @@ ENV PATH $PATH:$CATALINA_HOME/bin:$CATALINA_HOME/scripts
 # Install Tomcat
 RUN apt-get update; \
 	apt-get install -y --no-install-recommends \
-    wget
+    wget \
+    curl
 
 
 RUN wget -q https://www.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR}/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \

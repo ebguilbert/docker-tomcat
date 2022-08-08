@@ -4,7 +4,7 @@ LABEL maintainer="Edwin Guilbert"
 
 # ENV variables for Tomcat
 ENV TOMCAT_MAJOR 9
-ENV TOMCAT_VERSION 9.0.54
+ENV TOMCAT_VERSION 9.0.65
 ENV CATALINA_HOME /opt/tomcat
 ENV CATALINA_TMPDIR /tmp/tomcat
 ENV DEPLOYMENT_DIR $CATALINA_HOME/webapps
